@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@jan/react-native-materials": ["../src/index"],
+      "@jan/react-native-materials/*": ["../src/*"]
+    }
+  }
+}

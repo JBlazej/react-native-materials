@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["MaterialsModule"]
+  },
+  "android": {
+    "modules": ["com.jan.materials.MaterialsModule"]
+  }
+}

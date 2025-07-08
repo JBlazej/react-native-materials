@@ -1,0 +1,30 @@
+{
+  "name": "react-native-materials-example",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "expo:prebuild": "expo prebuild --skip-dependency-update react,react-native,expo",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
+    "ios:development": "yarn clean:native && yarn expo:prebuild && yarn ios",
+    "android:development": "yarn clean:native && yarn expo:prebuild && yarn android",
+    "clean:native": "rm -rf android && rm -rf ios && rm -rf .expo"
+  },
+  "dependencies": {
+    "expo": "~53.0.17",
+    "react": "19.0.0",
+    "react-native": "0.79.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "typescript": "~5.8.3"
+  },
+  "private": true,
+  "expo": {
+    "autolinking": {
+      "nativeModulesDir": ".."
+    }
+  }
+}

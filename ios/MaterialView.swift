@@ -3,11 +3,14 @@ import SwiftUI
 
 struct MaterialSwiftUIView: View {
     let material: Material
+    let forcedColorScheme: ColorScheme?
     
     var body: some View {
-        Rectangle()
-            .foregroundColor(.clear)
+        Color.clear
             .background(material)
+            .applyIf(forcedColorScheme != nil) { view in
+                view.environment(\.colorScheme, forcedColorScheme!)
+            }
     }
 }
 
@@ -20,13 +23,21 @@ class MaterialView: ExpoView {
         }
     }
     
+    private var currentColorScheme: ColorScheme? = nil {
+        didSet { updateSwiftUIView() }
+    }
+    
     required init(appContext: AppContext? = nil) {
         super.init(appContext: appContext)
         loadSwiftUIView()
     }
     
     private func loadSwiftUIView() {
-        let view = MaterialSwiftUIView(material: currentMaterial)
+        let view = MaterialSwiftUIView(
+            material: currentMaterial,
+            forcedColorScheme: currentColorScheme
+        )
+        
         let hostingController = UIHostingController(rootView: view)
         
         hostingController.view.backgroundColor = .clear
@@ -35,20 +46,39 @@ class MaterialView: ExpoView {
         
         NSLayoutConstraint.activate([
             hostingController.view.topAnchor.constraint(equalTo: topAnchor),
-            hostingController.view.bottomAnchor.constraint(equalTo: bottomAnchor),
-            hostingController.view.leadingAnchor.constraint(equalTo: leadingAnchor),
-            hostingController.view.trailingAnchor.constraint(equalTo: trailingAnchor),
+            hostingController.view.bottomAnchor.constraint(
+                equalTo: bottomAnchor),
+            hostingController.view.leadingAnchor.constraint(
+                equalTo: leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(
+                equalTo: trailingAnchor),
         ])
         
         self.hostingController = hostingController
     }
     
     private func updateSwiftUIView() {
-        hostingController?.rootView = MaterialSwiftUIView(material: currentMaterial)
+        hostingController?.rootView = MaterialSwiftUIView(
+            material: currentMaterial,
+            forcedColorScheme: currentColorScheme
+        )
     }
     
     func setMaterial(_ style: String) {
         self.currentMaterial = materialFromString(style)
+    }
+    
+    func setColorScheme(_ scheme: String?) {
+        guard let scheme = scheme?.lowercased() else {
+            currentColorScheme = nil
+            return
+        }
+        
+        switch scheme {
+        case "light": currentColorScheme = .light
+        case "dark": currentColorScheme = .dark
+        default: currentColorScheme = nil
+        }
     }
     
     private func materialFromString(_ string: String) -> Material {
@@ -63,3 +93,15 @@ class MaterialView: ExpoView {
     }
 }
 
+extension View {
+    @ViewBuilder
+    func applyIf<T: View>(_ condition: Bool, transform: (Self) -> T)
+    -> some View
+    {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}

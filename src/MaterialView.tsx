@@ -1,10 +1,9 @@
-import {requireNativeView} from 'expo'
-import * as React from 'react'
-
 import {MaterialViewProps} from './Material.types'
 
-const NativeView: React.ComponentType<MaterialViewProps> = requireNativeView('Materials')
+export default function MaterialView(_: MaterialViewProps) {
+  console.error(
+    'MaterialView is not implemented for this platform. Please use the native implementation for Android or iOS.'
+  )
 
-export default function MaterialView(props: MaterialViewProps) {
-  return <NativeView {...props} />
+  return null
 }

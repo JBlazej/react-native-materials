@@ -14,7 +14,7 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.jan.materials.example"
+      "bundleIdentifier": "com.janblazej.materials.example"
     },
     "android": {
       "adaptiveIcon": {
@@ -22,7 +22,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.jan.materials.example"
+      "package": "com.janblazej.materials.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"

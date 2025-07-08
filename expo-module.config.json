@@ -4,6 +4,6 @@
     "modules": ["MaterialsModule"]
   },
   "android": {
-    "modules": ["com.jan.materials.MaterialsModule"]
+    "modules": ["com.janblazej.materials.MaterialsModule"]
   }
 }

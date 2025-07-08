@@ -1,9 +1,9 @@
-import {Material, MaterialsView} from '@jan/react-native-materials'
+import {Material, MaterialView} from '@janblazej/react-native-materials'
 import {LinearGradient} from 'expo-linear-gradient'
 import {useEffect, useState} from 'react'
 import {Appearance, ColorSchemeName, SafeAreaView, ScrollView, StyleSheet, Switch, Text, View} from 'react-native'
 
-const materials: Material[] = ['ultrathin', 'thin', 'regular', 'thick', 'ultrathick']
+const materials: Material[] = ['ultra-thin', 'thin', 'regular', 'thick', 'ultra-thick']
 
 export default function App() {
   const [colorScheme, setColorScheme] = useState<ColorSchemeName>('light')
@@ -21,7 +21,7 @@ export default function App() {
         {materials.map(material => (
           <View key={material} style={styles.card}>
             <View style={StyleSheet.absoluteFill}>
-              <MaterialsView material={material} style={{flex: 1}} />
+              <MaterialView material={material} style={{flex: 1}} />
             </View>
             <Text style={{color: colorScheme === 'dark' ? 'white' : 'black'}}>Material {material}</Text>
           </View>

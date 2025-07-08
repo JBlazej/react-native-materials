@@ -3,8 +3,8 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@jan/react-native-materials": ["../src/index"],
-      "@jan/react-native-materials/*": ["../src/*"]
+      "@janblazej/react-native-materials": ["../src/index"],
+      "@janblazej/react-native-materials/*": ["../src/*"]
     }
   }
 }

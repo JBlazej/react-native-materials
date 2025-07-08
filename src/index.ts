@@ -1,2 +1,2 @@
-export * from './Materials.types'
-export {default as MaterialsView} from './MaterialsView'
+export * from './Material.types'
+export {default as MaterialView} from './MaterialView'

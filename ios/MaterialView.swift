@@ -1,7 +1,7 @@
 import ExpoModulesCore
 import SwiftUI
 
-struct MaterialsSwiftUIView: View {
+struct MaterialSwiftUIView: View {
     let material: Material
     
     var body: some View {
@@ -11,8 +11,8 @@ struct MaterialsSwiftUIView: View {
     }
 }
 
-class MaterialsView: ExpoView {
-    private var hostingController: UIHostingController<MaterialsSwiftUIView>?
+class MaterialView: ExpoView {
+    private var hostingController: UIHostingController<MaterialSwiftUIView>?
     
     private var currentMaterial: Material = .regular {
         didSet {
@@ -26,7 +26,7 @@ class MaterialsView: ExpoView {
     }
     
     private func loadSwiftUIView() {
-        let view = MaterialsSwiftUIView(material: currentMaterial)
+        let view = MaterialSwiftUIView(material: currentMaterial)
         let hostingController = UIHostingController(rootView: view)
         
         hostingController.view.backgroundColor = .clear
@@ -44,7 +44,7 @@ class MaterialsView: ExpoView {
     }
     
     private func updateSwiftUIView() {
-        hostingController?.rootView = MaterialsSwiftUIView(material: currentMaterial)
+        hostingController?.rootView = MaterialSwiftUIView(material: currentMaterial)
     }
     
     func setMaterial(_ style: String) {
@@ -53,11 +53,11 @@ class MaterialsView: ExpoView {
     
     private func materialFromString(_ string: String) -> Material {
         switch string.lowercased() {
-        case "ultrathin": return .ultraThinMaterial
+        case "ultra-thin": return .ultraThinMaterial
         case "thin": return .thinMaterial
         case "regular": return .regularMaterial
         case "thick": return .thickMaterial
-        case "ultrathick": return .ultraThickMaterial
+        case "ultra-thick": return .ultraThickMaterial
         default: return .regularMaterial
         }
     }

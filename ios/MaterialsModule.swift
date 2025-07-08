@@ -5,8 +5,8 @@ public class MaterialsModule: Module {
     Name("Materials")
 
     View(MaterialsView.self) {
-      Prop("materialStyle") { (view: MaterialsView, materialStyle: String) in
-        view.setMaterialStyle(materialStyle)
+      Prop("material") { (view: MaterialsView, material: String) in
+        view.setMaterial(material)
       }
     }
   }

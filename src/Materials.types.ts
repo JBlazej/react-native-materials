@@ -1,7 +1,7 @@
 import {ViewProps} from 'react-native'
 
-export type MaterialStyle = 'ultrathin' | 'thin' | 'regular' | 'thick' | 'ultrathick'
+export type Material = 'ultrathin' | 'thin' | 'regular' | 'thick' | 'ultrathick'
 
 export type MaterialsViewProps = {
-  materialStyle: MaterialStyle
+  material: Material
 } & ViewProps

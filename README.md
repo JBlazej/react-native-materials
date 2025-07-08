@@ -9,7 +9,7 @@ A cross-platform React Native component for applying Material, using native Swif
 |--------------------------------------|------------------------------------|---------------|--------------|
 | ![iOS Light](./assets/ios-light.png) | ![iOS Dark](./assets/ios-dark.png) | ![Android Light](./assets/android-light.png) | ![Android Dark](./assets/android-dark.png) |
 
-> _Add screenshots above to show the effect on each platform and theme._
+> _Screenshots above to show the effect on each platform and theme._
 
 
 

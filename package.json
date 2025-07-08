@@ -23,8 +23,15 @@
   "keywords": [
     "react-native",
     "expo",
-    "@janblazej/react-native-materials",
-    "Materials"
+    "material",
+    "swiftui",
+    "android",
+    "ios",
+    "SwiftUI",
+    "Jetpack Compose",
+    "native",
+    "expo module",
+    "@janblazej/react-native-materials"
   ],
   "repository": "https://github.com/JBlazej/react-native-materials",
   "bugs": {

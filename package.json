@@ -1,7 +1,7 @@
 {
   "name": "@janblazej/react-native-materials",
-  "version": "0.1.0",
-  "description": "My new module",
+  "version": "0.1.1",
+  "description": "React Native component for native Material effects",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {

@@ -1,13 +1,20 @@
 # @janblazej/react-native-materials
 
-A cross-platform React Native component for applying Material, using native SwiftUI Materials on iOS and RenderEffect on Android to mimic the same effect.
+React Native component for native Material effects — using SwiftUI `Material` on iOS and `RenderEffect` on Android for consistent blur and translucency.
+
+## Features
+
+- ✨ Native SwiftUI `Material` on iOS
+- 🌀 Android `RenderEffect` support (API 31+)
+- 📱 Consistent blur and translucency across platforms
+- ⚡️ High-performance, platform-optimized rendering
 
 
 ## Screenshots
 
-| iOS Light                            | iOS Dark                           | Android Light | Android Dark |
-|--------------------------------------|------------------------------------|---------------|--------------|
-| ![iOS Light](./assets/ios-light.png) | ![iOS Dark](./assets/ios-dark.png) | ![Android Light](./assets/android-light.png) | ![Android Dark](./assets/android-dark.png) |
+| iOS Light                                    | iOS Dark                           | Android Light                                        | Android Dark |
+|----------------------------------------------|------------------------------------|------------------------------------------------------|--------------|
+| ![iOS Light](./example/assets/ios-light.png) | ![iOS Dark](./example/assets/ios-dark.png) | ![Android Light](./example/assets/android-light.png) | ![Android Dark](./example/assets/android-dark.png) |
 
 > _Screenshots above to show the effect on each platform and theme._
 
@@ -54,7 +61,7 @@ import { MaterialView } from '@janblazej/react-native-materials'
 |:-----------|:------------------------------------------------------------|:-----------:|:------------:|:-------------------------------------------------------------------------------|
 | `material` | `'ultra-thin'` \| `'thin'` \| `'regular'` \| `'thick'` \| `'ultra-thick'` | `'regular'`  |   No        | Material                                       |
 | `variant`  | `'light'` \| `'dark'`                                       |  auto       |    No        | Forces light/dark appearance. If not set, uses system color scheme.            |
-| ...ViewProps| [ViewProps](https://reactnative.dev/docs/view#props)        |    —        |    No        | All standard React Native View props.                                           |
+| ViewProps  | [ViewProps](https://reactnative.dev/docs/view#props)        |    —        |    No        | All standard React Native View props.                                           |
 
 
 

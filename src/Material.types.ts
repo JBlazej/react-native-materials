@@ -4,6 +4,6 @@ export type Material = 'ultra-thin' | 'thin' | 'regular' | 'thick' | 'ultra-thic
 export type MaterialStyle = 'light' | 'dark'
 
 export type MaterialViewProps = {
-  material: Material
+  material?: Material
   variant?: MaterialStyle
 } & ViewProps

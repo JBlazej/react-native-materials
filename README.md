@@ -18,15 +18,6 @@ React Native component for native Material effects — using SwiftUI `Material` 
 
 > _Screenshots above to show the effect on each platform and theme._
 
-
-
-## Features
-- **iOS:** Uses [SwiftUI Material](https://developer.apple.com/documentation/swiftui/material) for native, high-performance backgrounds.
-- **Android:** Uses [RenderEffect](https://developer.android.com/reference/android/graphics/RenderEffect) to approximate iOS Material blurs.
-- **Unified API:** Same props and behavior on both platforms.
-- **Automatic color scheme:** If `variant` is not set, the component adapts to the system color scheme (light/dark).
-
-
 ## Installation
 
 ```sh
